@@ -1,13 +1,13 @@
-package com.line.admin;
-
+package com.line.mall;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
 @SpringBootApplication
-public class MallAdminApplication {
+public class MallDemoApplication {
+
     public static void main(String[] args) {
-        SpringApplication.run(MallAdminApplication.class, args);
+        SpringApplication.run(MallDemoApplication.class, args);
     }
+
 }

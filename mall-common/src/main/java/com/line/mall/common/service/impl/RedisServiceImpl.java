@@ -18,6 +18,6 @@ public class RedisServiceImpl implements RedisService {
 
     @Override
     public void set(String key, Object value) {
-
+        redisTemplate.opsForValue().set(key, value);
     }
 }

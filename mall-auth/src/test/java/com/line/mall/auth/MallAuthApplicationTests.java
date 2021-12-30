@@ -1,10 +1,10 @@
-package com.line.admin;
+package com.line.mall.auth;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MallAdminApplicationTests {
+class MallAuthApplicationTests {
 
     @Test
     void contextLoads() {

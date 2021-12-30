@@ -16,10 +16,11 @@
     </parent>
 
     <dependencies>
-<!--        <dependency>-->
-<!--            <groupId>com.macro.mall</groupId>-->
-<!--            <artifactId>mall-mbg</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.line.mall</groupId>
+            <artifactId>mall-data</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
