@@ -29,7 +29,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <scope>provides</scope>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>

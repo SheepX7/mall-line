@@ -11,21 +11,22 @@ spring:
       ddl-auto: update
     show-sql: true
 
+
 security:
   oauth2:
     client:
-      client-id: ""
-      access-token-uri: http://localhost:8083/oauth/token
-      user-authorization-uri: http://auth-server:8083/oauth/authorize
-      scope: all
-      client-secret:
+      client-id: line-client
+      access-token-uri: http://localhost:8089/oauth/token
+      user-authorization-uri: http://localhost:8089/oauth/authorize
+      scope: app
+      client-secret: secret
       grant-type: password
       use-current-uri: false
-      pre-established-redirect-uri: http://localhost:8083/authorized
+      pre-established-redirect-uri: http://localhost:8089/authorized
 
     resource:
       jwk:
-        key-set-uri: http://auth-server:8083/oauth2/keys
+        key-set-uri: http://localhost:8089/oauth2/keys
 
 management:
   endpoints:

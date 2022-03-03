@@ -19,10 +19,15 @@ public class Oauth2AuthorizationServerConfiguration extends AuthorizationServerC
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         super.configure(clients);
+
+        // Memory for test
         clients.inMemory()
                 .withClient("line-client")
-                .authorizedGrantTypes("password", "client_credentials", "refresh_token", "authorization_code")
-                .authorities("line-client-0")
+                .secret("secret")
+                .authorizedGrantTypes("password")
+                .authorities("line-client")
+                .scopes("app")
+                .redirectUris("www.baidu.com")
                 .autoApprove(true);
     }
 
@@ -34,6 +39,9 @@ public class Oauth2AuthorizationServerConfiguration extends AuthorizationServerC
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
         super.configure(security);
+        security
+                .tokenKeyAccess("permitAll()")
+                .checkTokenAccess("isAuthenticated()");
     }
 
     @Bean
